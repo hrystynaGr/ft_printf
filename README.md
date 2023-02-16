@@ -21,3 +21,10 @@ With this approach we can save resources, because compiling is a resource-intens
 'install: main'\
 ' cp main /temp/Mainprogram' -> puts the main program in the folder given in the path\
 'gg_sw = -g' -> variable to compile with debug options
+
+### rc crs
+ar -rcs is used to compile a library.\
+`r` means that if the library already exists, replace the old files within the library with your new files.\
+`c` means create the library if it did not exist.\
+`s` can be seen to mean 'sort' (create a sorted index of) the library, so that it will be indexed and faster to access the functions in the library.\
+Therefore, rcs can be seen to mean replace, create, sort.

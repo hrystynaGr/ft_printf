@@ -1,6 +1,7 @@
 NAME =  libftprintf.a
 LIBFT_PATH	= ./libft --no-print-directory
 LIBFT_NAME	= ./libft/libft.a
+FILE = libftprintf.c
 
 
 FLAGS	= -Wall -Wextra -Werror 
@@ -13,7 +14,7 @@ OBJS = ${SRC:.c=.o}
 all:	$(LIBFT_NAME) ${NAME} 
 
 $(NAME):	${OBJS}
-		${CC} ${FLAGS} -o $(NAME) ${OBJS}
+		${CC} ${FLAGS} $(FILE) ${OBJS} ${LIBFT_NAME} -o ttt
 
 $(LIBFT_NAME):
 		@make -C $(LIBFT_PATH)
@@ -22,6 +23,8 @@ clean:
 		${RM} ${OBJS} 
 
 fclean: clean
-		${RM} ${NAME} $(LIBFT_NAME)
+		${RM} $(LIBFT_NAME)
 
 re:		fclean all
+
+.PHONY:	all bonus clean fclean re

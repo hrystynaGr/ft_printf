@@ -16,11 +16,11 @@ int	ft_printchar(int c)
 	return (1);
 }
 
-int	ft_putchar_ptr(char *c)
-{
-	write(1, c, 1);
-	return (1);
-}
+// int	ft_printchar(char *c)
+// {
+// 	write(1, c, 1);
+// 	return (1);
+// }
 // void	ft_print_str(char *str)
 // {
 // 	int	i;
@@ -51,7 +51,7 @@ void print_format(const char *c, va_list p)
         
         // write(1, va_arg(p, int), 1);
     else if (*c == 'c'){
-        ft_putchar_ptr(va_arg(p, char *));
+        ft_printchar(va_arg(p, int));
         // write(1, "Hi", 3);
         // printf("%d", va_arg(p, char *));
         // write(1, va_arg(p, char *), 1);

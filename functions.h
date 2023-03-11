@@ -4,4 +4,4 @@
 # include <stdlib.h>
 # include <stddef.h>
 
-int ft_printf();
+int ft_printf(const char *, ...);

@@ -14,7 +14,7 @@ OBJS = ${SRC:.c=.o}
 all:	$(LIBFT_NAME) ${NAME} 
 
 $(NAME):	${OBJS}
-		${CC} ${FLAGS} $(FILE) ${OBJS} ${LIBFT_NAME} -o ttt
+		${CC} ${FLAGS} $(FILE) ${OBJS} ${LIBFT_NAME}
 
 $(LIBFT_NAME):
 		@make -C $(LIBFT_PATH)

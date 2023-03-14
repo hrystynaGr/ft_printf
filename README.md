@@ -14,7 +14,7 @@ With this approach we can save resources, because compiling is a resource-intens
 ` cc -o main main.o fuction.o` -> what command should be used to build this\
 `main.o: main.c`\
 ` cc -c $(gg_sw) main.c`\
-`function.o: fuction.c functions.h`\
+`function.o: fuction.c ft_printf.h`\
 ` cc -c $(gg_sw) fuction.c`\
 ` clean: `\
 ` rm main main.o fuction.o` - > cleans up unneeded files, so that the project can be recompiled from scratch\

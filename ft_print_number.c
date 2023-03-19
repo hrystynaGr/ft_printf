@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_print_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbalan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/02 18:12:18 by hbalan            #+#    #+#             */
-/*   Updated: 2023/02/02 18:12:20 by hbalan           ###   ########.fr       */
+/*   Created: 2023/02/21 19:54:26 by hbalan            #+#    #+#             */
+/*   Updated: 2023/02/21 20:07:20 by hbalan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"ft_printf.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_putnbr(int x)
 {
-	int		i;
+	int	digits;
 
-	i = 0;
-	while (lst != NULL)
+	digits = 0;
+	if (x == -2147483648)
 	{
-		i++;
-		lst = lst->next;
+		ft_print_char('-');
+		ft_print_char('2');
+		x = 147483648;
+		digits += 2;
 	}
-	return (i);
+	else if (x < 0)
+	{
+		ft_print_char('-');
+		x = -x;
+		digits++;
+	}
+	if (x >= 10)
+	{
+		digits += ft_putnbr(x / 10);
+	}
+	ft_print_char(x % 10 + '0');
+	digits++;
+	return (digits);
 }

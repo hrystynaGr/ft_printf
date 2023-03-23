@@ -14,5 +14,6 @@ int		ft_print_ptr(void *ptr);
 int		ft_print_hexa(unsigned long num, char type);
 int		ft_putnbr(int x);
 int		ft_putnbr_unsigned(unsigned int x);
+int	  ft_itoa(int n);
 
 #endif

@@ -3,7 +3,7 @@
 int print_format(const char *c, va_list p, int counter)
 {
     if (*c == 'd' || *c == 'i')
-        counter+=ft_print_char(va_arg(p, int));
+        counter+=ft_itoa(va_arg(p, int));
     else if (*c == 'c')
         counter+=ft_print_char(va_arg(p, int));
     else if (*c == 's')

@@ -1,6 +1,6 @@
 SRCS =	ft_printf.c ft_print_char.c\
 		ft_print_str.c ft_print_ptr.c ft_print_hexa.c\
-		ft_print_unsign_number.c ft_print_number.c
+		ft_print_unsign_number.c ft_print_number.c ft_itoa.c
 		
 OBJS = ${SRCS:.c=.o}
 NAME = libftprintf.a
